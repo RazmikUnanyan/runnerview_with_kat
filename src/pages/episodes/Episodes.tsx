@@ -23,7 +23,7 @@ export const Episodes: FC<IEpisodesProps> = () => (
               <div className={styles.product_mask}></div>
             </div>
             <span className={styles.episode_name}>{episodes.number}</span>
-            <a target="_blank" href={episodes.link} className={styles.product_button}>
+            <a target="_blank" rel="noreferrer" href={episodes.link} className={styles.product_button}>
               Watch on YouTube
             </a>
           </div>
