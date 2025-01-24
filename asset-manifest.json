@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/runnerview_with_kat/static/css/main.a5030034.css",
+    "main.js": "/runnerview_with_kat/static/js/main.34a67a1a.js",
+    "static/media/video.mp4": "/runnerview_with_kat/static/media/video.a00230384b6726da2bcc.mp4",
+    "static/media/img_1.png": "/runnerview_with_kat/static/media/img_1.8308b2896c68e3c5fc4b.png",
+    "static/media/dots-bg.svg": "/runnerview_with_kat/static/media/dots-bg.aa8289c51cd678b8cd47.svg",
+    "index.html": "/runnerview_with_kat/index.html",
+    "main.a5030034.css.map": "/runnerview_with_kat/static/css/main.a5030034.css.map",
+    "main.34a67a1a.js.map": "/runnerview_with_kat/static/js/main.34a67a1a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a5030034.css",
+    "static/js/main.34a67a1a.js"
+  ]
+}
