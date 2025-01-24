@@ -18,7 +18,7 @@ export const Sidebar: FC<ISidebarProps> = () => {
         className={cn(styles.aside, {
           [styles.aside_mobile_open]: openMenu,
         })}>
-        <Link to="/unanyan.am" className={styles.logo}>
+        <Link to="/runnerview_with_kat" className={styles.logo}>
           <img src={Logo} alt="logo" />
         </Link>
 
@@ -26,7 +26,7 @@ export const Sidebar: FC<ISidebarProps> = () => {
           <div className={styles.nav_menu}>
             <ul className={styles.nav_list}>
               <li className={styles.nav_item} onClick={() => setOpenMenu((prev) => !prev)}>
-                <NavLink to="/unanyan.am" className={styles.nav_link} style={active}>
+                <NavLink to="/runnerview_with_kat" className={styles.nav_link} style={active}>
                   <i className="icon-home"></i>
                 </NavLink>
               </li>

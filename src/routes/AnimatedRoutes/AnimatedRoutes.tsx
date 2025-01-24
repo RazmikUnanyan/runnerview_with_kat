@@ -9,7 +9,7 @@ export const AnimatedRoutes = () => {
   return (
     <AnimatePresence>
       <Routes location={location} key={location.pathname}>
-        <Route path="/unanyan.am" element={<Home />} />
+        <Route path="/runnerview_with_kat" element={<Home />} />
         <Route path="/contact" element={<Contacts />} />
         <Route path="/episodes" element={<Episodes />} />
         <Route path="/about" element={<About />} />
