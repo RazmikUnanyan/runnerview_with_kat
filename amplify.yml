@@ -1,0 +1,13 @@
+artifacts:
+  baseDirectory: build
+  files:
+    - '**/*'
+customHeaders:
+  - pattern: '**/*.mp4'
+    headers:
+      - key: Content-Type
+        value: video/mp4
+  - pattern: '**/*.webm'
+    headers:
+      - key: Content-Type
+        value: video/webm
