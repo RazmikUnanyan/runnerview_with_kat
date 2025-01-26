@@ -1,36 +1,107 @@
-import cn from "classnames";
+import React, { FC, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import React, { FC } from "react";
-
+import emailjs from "@emailjs/browser";
+import cn from "classnames";
 import styles from "./contacts.module.scss";
+import { PageTitle, Input, Textarea, Button } from "../../components";
 import { IContactsProps } from "./contacts.props";
-import { Button, Input, PageTitle, Textarea } from "../../components";
 
+const initialForm = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+}
 export const Contacts: FC<IContactsProps> = () => {
+  const [formData, setFormData] = useState(initialForm);
+  const [filledFields, setFilledFields] = useState(0);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault();
+
+
+    emailjs
+      .send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID || '',
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || '',
+        formData,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY || '',
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully:", result.text);
+          setFormData(initialForm)
+        },
+        (error) => {
+          console.error("Email sending failed:", error.text);
+          setFormData(initialForm)
+        }
+      );
+  };
+
+  useEffect(() => {
+    const count = Object.values(formData).filter((value) => value.trim() !== "").length;
+    setFilledFields(count);
+  }, [formData]);
+
   return (
     <motion.section className={styles.contacts_wrapper} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <PageTitle>Contact us</PageTitle>
       <div className={styles.contacts}>
         <div className={styles.contacts_info}>
-          {/*<h3 className={styles.contacts_title}>Остались Вопросы?</h3>*/}
-          {/*<p className={styles.contacts_Detail}>Наш менеджер свяжется с вами.</p>*/}
+          {/* Дополнительная информация, если нужна */}
         </div>
-        <form action="" className={styles.contacts_form}>
+        <form onSubmit={sendEmail} className={styles.contacts_form}>
           <div className={styles.contacts_form_group}>
             <div className={styles.contacts_form_input_wrapper}>
-              <Input type="text" placeholder="Name" />
+              <Input
+                type="text"
+                name="name"
+                placeholder="Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
             </div>
             <div className={styles.contacts_form_input_wrapper}>
-              <Input type="text" placeholder="Email" />
+              <Input
+                type="email"
+                name="email"
+                placeholder="Email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
             </div>
           </div>
           <div className={styles.contacts_form_input_wrapper}>
-            <Input type="text" placeholder="Subject" />
+            <Input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={formData.subject}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className={cn(styles.contacts_form_input_wrapper, styles.contacts_form_input_area)}>
-            <Textarea placeholder="Text" name="" id="" rows={30} cols={10}></Textarea>
+            <Textarea
+              name="message"
+              placeholder="Message"
+              rows={10}
+              value={formData.message}
+              onChange={handleChange}
+              required></Textarea>
           </div>
-          <Button>Send</Button>
+          <Button percentageFilled={25 * filledFields} type="submit" variant={filledFields < 4 ? 'outline' : 'primary'}>Send</Button>
         </form>
       </div>
     </motion.section>
