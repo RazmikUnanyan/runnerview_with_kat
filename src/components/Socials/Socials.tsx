@@ -12,8 +12,8 @@ export const Socials: FC<ISocialsProps> = ({ ...props }) => (
     <LinkIcon to="https://www.youtube.com/@RunnerviewWithKat" target="_blank">
       <i className="icon-social-youtube"></i>
     </LinkIcon>
-    <LinkIcon to="#" target="_blank">
-      <i className="icon-social-facebook"></i>
+    <LinkIcon to="https://open.spotify.com/show/6TRR1IVOe4VpjaDZH2M9LD?si=XK3cNdXMQna3POOZEg_opw" target="_blank">
+      <i className="icon-social-spotify"></i>
     </LinkIcon>
   </div>
 );
