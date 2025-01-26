@@ -1,5 +1,6 @@
 export interface IEpisode {
-  link: string,
+  linkYouTube: string;
+  linkSpotify: string;
   id: string | number;
   number: string;
   image: string;

@@ -75,17 +75,25 @@
   transition: 0.3s;
   opacity: 1;
 }
-
-.product_button {
-  color: white;
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.productButtonYoutube {
+  color: white;
   overflow: hidden;
   font-size: $fs-media;
-  display: block;
-  background-color: $cl-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #c4302b;
   height: 40px;
   width: 40px;
   cursor: pointer;
@@ -97,7 +105,32 @@
   opacity: 0;
 }
 
-.product_card:hover .product_button {
+.productButtonSpotify {
+  color: white;
+  overflow: hidden;
+  font-size: $fs-media;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #81b71a;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 42px;
+
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.product_card:hover .productButtonYoutube {
+  opacity: 1;
+  width: 10rem;
+}
+
+.product_card:hover .productButtonSpotify {
   opacity: 1;
   width: 10rem;
 }
