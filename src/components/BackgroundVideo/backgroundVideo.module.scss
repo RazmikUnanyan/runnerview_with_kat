@@ -3,7 +3,7 @@
 .backgroundVideoContainer {
     position: fixed;
     width: 100%;
-    height: 100vh; /* Высота на весь экран */
+    height: 100vh;
     overflow: hidden;
     background-color: rgba(94, 92, 127, 0.77);
 }
@@ -15,7 +15,7 @@
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Обеспечивает покрытие всего контейнера */
+    object-fit: cover;
     z-index: -1;
 }
 
