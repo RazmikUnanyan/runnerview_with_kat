@@ -4,4 +4,5 @@ export interface IButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTM
   children: ReactNode;
   variant?: "primary" | "secondary" | "outline";
   counter?: number;
+  percentageFilled?: number;
 }
