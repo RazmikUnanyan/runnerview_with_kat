@@ -4,4 +4,6 @@ export interface IEpisode {
   id: string | number;
   number: string;
   image: string;
+  title: string;
+  description: string;
 }
