@@ -75,17 +75,25 @@
   transition: 0.3s;
   opacity: 1;
 }
-
-.productButton {
-  color: white;
-  overflow: hidden;
-  font-size: $fs-media;
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.productButtonYoutube {
+  color: white;
+  overflow: hidden;
+  font-size: $fs-media;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  background-color: $cl-primary;
+  background-color: #c4302b;
   height: 40px;
   width: 40px;
   cursor: pointer;
@@ -95,13 +103,34 @@
 
   transition: 0.3s;
   opacity: 0;
-
-  & i {
-    height: 100px;
-  }
 }
 
-.product_card:hover .productButton {
+.productButtonSpotify {
+  color: white;
+  overflow: hidden;
+  font-size: $fs-media;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #81b71a;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 42px;
+
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.product_card:hover .productButtonYoutube {
+  opacity: 1;
+  width: 10rem;
+}
+
+.product_card:hover .productButtonSpotify {
   opacity: 1;
   width: 10rem;
 }
@@ -119,24 +148,6 @@
   opacity: 0;
 }
 
-.stream {
-  height: 0;
-  width: 100%;
-  overflow: hidden;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  transition: height 0.5s ease;
-  border-radius: $box-radius $box-radius 0 0;
-}
-
-.streamOpen {
-  height: 600px;
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid $cl-date;
-}
-
 @media screen and (max-width: 1024px) {
   .product_grid {
     grid-template-columns: repeat(3, 1fr);
@@ -148,10 +159,6 @@
   .product_grid {
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-  }
-  .wrapper {
-    display: flex;
-    flex-direction: column;
   }
 }
 
