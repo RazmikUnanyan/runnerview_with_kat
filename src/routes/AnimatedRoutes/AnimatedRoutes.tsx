@@ -2,7 +2,7 @@ import { AnimatePresence } from "framer-motion";
 import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 
-import { Contacts, Home, Episodes, About } from "../../pages";
+import { Contacts, Home, Episodes, About, Nominate } from "../../pages";
 
 export const AnimatedRoutes = () => {
   const location = useLocation();
@@ -13,6 +13,7 @@ export const AnimatedRoutes = () => {
         <Route path="/contact" element={<Contacts />} />
         <Route path="/episodes" element={<Episodes />} />
         <Route path="/about" element={<About />} />
+        <Route path="/nominate" element={<Nominate />} />
       </Routes>
     </AnimatePresence>
   );

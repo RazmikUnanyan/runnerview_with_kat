@@ -44,6 +44,12 @@ export const Sidebar: FC<ISidebarProps> = () => {
               </li>
 
               <li className={styles.nav_item} onClick={() => setOpenMenu((prev) => !prev)}>
+                <NavLink to="/nominate" className={styles.nav_link} style={active}>
+                  <i className="icon-people"></i>
+                </NavLink>
+              </li>
+
+              <li className={styles.nav_item} onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/contact" className={styles.nav_link} style={active}>
                   <i className="icon-envelope"></i>
                 </NavLink>
