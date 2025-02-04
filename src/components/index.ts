@@ -4,3 +4,4 @@ export * from "./PageTitle/PageTitle";
 export * from "./Shapes/Shapes";
 export * from "./Socials/Socials";
 export * from "./Notification/Notification";
+export * from "./Nominate/Nominate";
