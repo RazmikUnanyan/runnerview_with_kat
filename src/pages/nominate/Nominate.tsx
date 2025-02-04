@@ -61,12 +61,13 @@ export const Nominate: FC<INominateProps> = () => {
       <div className={styles.contacts}>
         <div className={styles.contacts_info}>{/* Дополнительная информация, если нужна */}</div>
         <form onSubmit={sendEmail} className={styles.contacts_form}>
+          Your Name and Email
           <div className={styles.contacts_form_group}>
             <div className={styles.contacts_form_input_wrapper}>
               <Input
                 type="text"
                 name="name"
-                placeholder="Name"
+                placeholder="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -76,19 +77,20 @@ export const Nominate: FC<INominateProps> = () => {
               <Input
                 type="email"
                 name="email"
-                placeholder="Email"
+                placeholder="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
               />
             </div>
           </div>
+          Whom would you like to nominate?
           <div className={styles.contacts_form_group}>
             <div className={styles.contacts_form_input_wrapper}>
               <Input
                 type="text"
                 name="firstName"
-                placeholder="First Name"
+                placeholder="first name"
                 value={formData.firstName}
                 onChange={handleChange}
                 required
@@ -98,27 +100,29 @@ export const Nominate: FC<INominateProps> = () => {
               <Input
                 type="text"
                 name="lastName"
-                placeholder="Last Name"
+                placeholder="last name"
                 value={formData.lastName}
                 onChange={handleChange}
                 required
               />
             </div>
           </div>
+          What's their Instagram handle?
           <div className={styles.contacts_form_input_wrapper}>
             <Input
               type="text"
               name="link"
-              placeholder="What's their Instagram handle?"
+              placeholder="link"
               value={formData.link}
               onChange={handleChange}
               required
             />
           </div>
+          Why do you think they would be an inspiring guest?
           <div className={cn(styles.contacts_form_input_wrapper, styles.contacts_form_input_area)}>
             <Textarea
               name="message"
-              placeholder="Why do you think they would be an inspiring guest?"
+              placeholder="text"
               rows={10}
               value={formData.message}
               onChange={handleChange}
