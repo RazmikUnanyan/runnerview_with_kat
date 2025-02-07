@@ -62,10 +62,10 @@ export const Nominate: FC<INominateProps> = () => {
       <PageTitle>Nominate</PageTitle>
       <div className={styles.contacts}>
         <div className={styles.contacts_info}>
-          We all have someone who has <span>inspired</span> us,
-          believed in us, and made a lasting impact on our
-          journey. Now it's your chance to share <span>their story</span> and inspire others!  <span>Nominate</span> a podcast guest and help us
-          spotlight the voices that <span>deserve</span> to be heard.
+          We all have someone who has <span>inspired</span> us, believed in us, and made a lasting impact on our
+          journey. Now it's your chance to share <span>their story</span> and inspire others! Nominate a podcast guest
+          and help us
+          <span> spotlight</span> the voices that deserve to be heard.
         </div>
         <form onSubmit={sendEmail} className={styles.contacts_form}>
           Your Name
@@ -127,11 +127,24 @@ export const Nominate: FC<INominateProps> = () => {
           </div>
           Their Email
           <div className={styles.contacts_form_input_wrapper}>
-            <Input type="text" name="theirEmail" placeholder="email" value={formData.theirEmail} onChange={handleChange} />
+            <Input
+              type="text"
+              name="theirEmail"
+              placeholder="email"
+              value={formData.theirEmail}
+              onChange={handleChange}
+            />
           </div>
           What's their IG account?
           <div className={styles.contacts_form_input_wrapper}>
-            <Input type="text" name="link" placeholder="account" value={formData.link} onChange={handleChange} required />
+            <Input
+              type="text"
+              name="link"
+              placeholder="account"
+              value={formData.link}
+              onChange={handleChange}
+              required
+            />
           </div>
           Why do you think they would be an inspiring guest?
           <div className={cn(styles.contacts_form_input_wrapper, styles.contacts_form_input_area)}>
