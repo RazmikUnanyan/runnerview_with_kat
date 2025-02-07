@@ -8,7 +8,8 @@ import { PageTitle, Input, Textarea, Button } from "../../components";
 import { INominateProps } from "./nominate.props";
 
 const initialForm = {
-  name: "",
+  yourFirstName: "",
+  yourLastName: "",
   email: "",
   firstName: "",
   lastName: "",
@@ -59,30 +60,40 @@ export const Nominate: FC<INominateProps> = () => {
     <motion.section className={styles.contacts_wrapper} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <PageTitle>Nominate</PageTitle>
       <div className={styles.contacts}>
-        <div className={styles.contacts_info}>{/* Дополнительная информация, если нужна */}</div>
+        <div className={styles.contacts_info}></div>
         <form onSubmit={sendEmail} className={styles.contacts_form}>
-          Your Name and Email
+          About you
           <div className={styles.contacts_form_group}>
             <div className={styles.contacts_form_input_wrapper}>
               <Input
                 type="text"
-                name="name"
-                placeholder="name"
-                value={formData.name}
+                name="yourFirstName"
+                placeholder="first name"
+                value={formData.yourFirstName}
                 onChange={handleChange}
                 required
               />
             </div>
             <div className={styles.contacts_form_input_wrapper}>
               <Input
-                type="email"
-                name="email"
-                placeholder="email"
-                value={formData.email}
+                type="text"
+                name="yourLastName"
+                placeholder="last name"
+                value={formData.yourLastName}
                 onChange={handleChange}
                 required
               />
             </div>
+          </div>
+          <div className={styles.contacts_form_input_wrapper}>
+            <Input
+              type="email"
+              name="email"
+              placeholder="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </div>
           Whom would you like to nominate?
           <div className={styles.contacts_form_group}>
@@ -107,16 +118,9 @@ export const Nominate: FC<INominateProps> = () => {
               />
             </div>
           </div>
-          What's their Instagram handle?
+          What's their IG account?
           <div className={styles.contacts_form_input_wrapper}>
-            <Input
-              type="text"
-              name="link"
-              placeholder="link"
-              value={formData.link}
-              onChange={handleChange}
-              required
-            />
+            <Input type="text" name="link" placeholder="link" value={formData.link} onChange={handleChange} required />
           </div>
           Why do you think they would be an inspiring guest?
           <div className={cn(styles.contacts_form_input_wrapper, styles.contacts_form_input_area)}>
@@ -128,7 +132,7 @@ export const Nominate: FC<INominateProps> = () => {
               onChange={handleChange}
               required></Textarea>
           </div>
-          <Button percentageFilled={19 * filledFields} type="submit" variant={filledFields < 6 ? "outline" : "primary"}>
+          <Button percentageFilled={15 * filledFields} type="submit" variant={filledFields < 7 ? "outline" : "primary"}>
             Send
           </Button>
         </form>

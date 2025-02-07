@@ -22,7 +22,7 @@ export const Home: FC<IHomeProps> = () => {
       <div className={styles.intro}>
         <h1 className={styles.home_name}>Runnerview With Kat </h1>
         <Socials />
-        <Button onClick={() => navigate("/nominate")}>nominate</Button>
+        <Button onClick={() => navigate("/nominate")}>nominate a guest</Button>
       </div>
     </motion.section>
   );
