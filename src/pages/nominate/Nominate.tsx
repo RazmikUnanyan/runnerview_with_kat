@@ -62,7 +62,7 @@ export const Nominate: FC<INominateProps> = () => {
       <div className={styles.contacts}>
         <div className={styles.contacts_info}></div>
         <form onSubmit={sendEmail} className={styles.contacts_form}>
-          About you
+          Your Name
           <div className={styles.contacts_form_group}>
             <div className={styles.contacts_form_input_wrapper}>
               <Input
@@ -85,6 +85,7 @@ export const Nominate: FC<INominateProps> = () => {
               />
             </div>
           </div>
+          Your Email
           <div className={styles.contacts_form_input_wrapper}>
             <Input
               type="email"
