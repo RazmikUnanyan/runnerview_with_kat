@@ -7,7 +7,8 @@ import { PageTitle, Input, Textarea, Button } from "../../components";
 import { IContactsProps } from "./contacts.props";
 
 const initialForm = {
-  name: "",
+  firstName: "",
+  lastName: "",
   email: "",
   subject: "",
   message: "",
@@ -64,23 +65,33 @@ export const Contacts: FC<IContactsProps> = () => {
             <div className={styles.contacts_form_input_wrapper}>
               <Input
                 type="text"
-                name="name"
-                placeholder="Name"
-                value={formData.name}
+                name="firstName"
+                placeholder="First Name"
+                value={formData.firstName}
                 onChange={handleChange}
                 required
               />
             </div>
             <div className={styles.contacts_form_input_wrapper}>
               <Input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={formData.email}
+                type="text"
+                name="lastName"
+                placeholder="Last Name"
+                value={formData.lastName}
                 onChange={handleChange}
                 required
               />
             </div>
+          </div>
+          <div className={styles.contacts_form_input_wrapper}>
+            <Input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className={styles.contacts_form_input_wrapper}>
             <Input
@@ -101,7 +112,8 @@ export const Contacts: FC<IContactsProps> = () => {
               onChange={handleChange}
               required></Textarea>
           </div>
-          <Button percentageFilled={25 * filledFields} type="submit" variant={filledFields < 4 ? 'outline' : 'primary'}>Send</Button>
+          <Button percentageFilled={20 * filledFields} type="submit"
+                  variant={filledFields < 5 ? 'outline' : 'primary'}>Send</Button>
         </form>
       </div>
     </motion.section>

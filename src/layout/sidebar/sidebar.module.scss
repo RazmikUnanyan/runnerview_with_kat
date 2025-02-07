@@ -29,9 +29,13 @@
 }
 
 .nav_link {
-  font-size: 1.5rem;
+  font-size: $fs-primary;
   color: $cl-body;
   font-weight: $fw-bold;
+
+  & span {
+    color: $cl-primary;
+  }
 }
 
 .nav_link:hover {

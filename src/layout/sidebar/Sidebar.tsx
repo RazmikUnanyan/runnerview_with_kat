@@ -27,31 +27,31 @@ export const Sidebar: FC<ISidebarProps> = () => {
             <ul className={styles.nav_list}>
               <li className={styles.nav_item} onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/" className={styles.nav_link} style={active}>
-                  <i className="icon-home"></i>
+                  Home
                 </NavLink>
               </li>
 
               <li className={styles.nav_item} onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/episodes" className={styles.nav_link} style={active}>
-                  <i className="icon-fire"></i>
+                  Episodes
                 </NavLink>
               </li>
 
               <li className={styles.nav_item} onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/about" className={styles.nav_link} style={active}>
-                  <i className="icon-notebook"></i>
+                  About
                 </NavLink>
               </li>
 
               <li className={styles.nav_item} onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/nominate" className={styles.nav_link} style={active}>
-                  <i className="icon-people"></i>
+                  Nominate
                 </NavLink>
               </li>
 
               <li className={styles.nav_item} onClick={() => setOpenMenu((prev) => !prev)}>
                 <NavLink to="/contact" className={styles.nav_link} style={active}>
-                  <i className="icon-envelope"></i>
+                  Contact
                 </NavLink>
               </li>
             </ul>

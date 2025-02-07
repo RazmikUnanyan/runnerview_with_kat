@@ -61,7 +61,12 @@ export const Nominate: FC<INominateProps> = () => {
     <motion.section className={styles.contacts_wrapper} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <PageTitle>Nominate</PageTitle>
       <div className={styles.contacts}>
-        <div className={styles.contacts_info}></div>
+        <div className={styles.contacts_info}>
+          We all have someone who has <span>inspired</span> us,
+          believed in us, and made a lasting impact on our
+          journey. Now it's your chance to share <span>their story</span> and inspire others!  <span>Nominate</span> a podcast guest and help us
+          spotlight the voices that <span>deserve</span> to be heard.
+        </div>
         <form onSubmit={sendEmail} className={styles.contacts_form}>
           Your Name
           <div className={styles.contacts_form_group}>
