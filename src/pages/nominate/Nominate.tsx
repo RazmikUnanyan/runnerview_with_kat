@@ -13,6 +13,7 @@ const initialForm = {
   email: "",
   firstName: "",
   lastName: "",
+  theirEmail: "",
   link: "",
   message: "",
 }
@@ -119,9 +120,13 @@ export const Nominate: FC<INominateProps> = () => {
               />
             </div>
           </div>
+          Their Email
+          <div className={styles.contacts_form_input_wrapper}>
+            <Input type="text" name="theirEmail" placeholder="email" value={formData.theirEmail} onChange={handleChange} />
+          </div>
           What's their IG account?
           <div className={styles.contacts_form_input_wrapper}>
-            <Input type="text" name="link" placeholder="link" value={formData.link} onChange={handleChange} required />
+            <Input type="text" name="link" placeholder="account" value={formData.link} onChange={handleChange} required />
           </div>
           Why do you think they would be an inspiring guest?
           <div className={cn(styles.contacts_form_input_wrapper, styles.contacts_form_input_area)}>
