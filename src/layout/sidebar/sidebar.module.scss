@@ -29,13 +29,9 @@
 }
 
 .nav_link {
-  font-size: $fs-primary;
+  font-size: $fs-h3;
   color: $cl-body;
   font-weight: $fw-bold;
-
-  & span {
-    color: $cl-primary;
-  }
 }
 
 .nav_link:hover {
