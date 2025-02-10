@@ -30,6 +30,19 @@
   resize: none;
 }
 
+.stub {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+
+  & h2 {
+    color: $cl-primary;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .contacts {
