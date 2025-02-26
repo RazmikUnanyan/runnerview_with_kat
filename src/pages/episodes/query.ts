@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const fetchEpisodes = async () => {
     const response = await fetch(
-        "http://ec2-18-218-203-195.us-east-2.compute.amazonaws.com/api/product/product/",
+        "/api/product/product/",
         {
             method: "GET",
             headers: {
