@@ -10,6 +10,8 @@ import { useEpisodes } from "./query";
 
 export const Episodes: FC<IEpisodesProps> = () => {
   const { data: episodes, isLoading, error } = useEpisodes();
+
+  console.log('error', error);
   return (
     <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
     <div className={styles.product_header}>
