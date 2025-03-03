@@ -21,14 +21,14 @@ export const Episodes: FC<IEpisodesProps> = () => {
       </div>
     </div>
     <div className={styles.product_grid}>
-      {isLoading && <Skeleton className={styles.product_card}/>}
-      {episodes?.map((episodes: any) => (
+      {/*{isLoading && <Skeleton className={styles.product_card}/>}*/}
+      {IEpisode_MOCK?.map((episodes) => (
         <div className={styles.product_card} key={episodes.id}>
           <div className={styles.product_thumbnail}>
             <Image src={episodes?.image} alt="" className={styles.product_img} />
             <div className={styles.product_mask}></div>
           </div>
-          <span className={styles.episode_name}>{episodes.title}</span>
+          <span className={styles.episode_name}>{episodes.number}</span>
           <div className={styles.buttonWrapper}>
             <a target="_blank" rel="noreferrer" href={episodes.linkYouTube} className={styles.productButtonYoutube}>
               <i className="icon-social-youtube"></i>
