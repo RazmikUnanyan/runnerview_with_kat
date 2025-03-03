@@ -26,6 +26,46 @@
   z-index: 4;
 }
 
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $cl-body;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 2rem;
+  border-radius: 1rem;
+  width: 85%;
+  background-color: $cl-primary;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.logo_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 1rem;
+  width: 4rem;
+  background-color: $cl-secondary;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.logo {
+  & img {
+    position: absolute;
+    left: -1rem;
+    top: -1rem;
+    z-index: 3;
+    width: 6rem;
+    transition: 0.9s;
+  }
+}
+
+
 .filter_wrapper {
   width: 100%;
   display: flex;
@@ -76,10 +116,6 @@
   opacity: 1;
 }
 
-.title {
-
-}
-
 .buttonWrapper {
   display: flex;
   flex-direction: column;
@@ -98,7 +134,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #c4302b;
+  background-color: $cl-primary;
   height: 40px;
   width: 40px;
   cursor: pointer;
@@ -118,7 +154,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #81b71a;
+  background-color: $cl-secondary;
   height: 40px;
   width: 40px;
   cursor: pointer;
@@ -135,9 +171,23 @@
   width: 10rem;
 }
 
+.product_card:hover .logo_back {
+  left: -5rem;
+}
+
+.product_card:hover .title {
+  bottom: -2rem;
+}
+
 .product_card:hover .productButtonSpotify {
   opacity: 1;
   width: 10rem;
+}
+
+.product_card:hover .logo {
+  & img {
+    left: -9rem;
+  }
 }
 
 .product_card:hover .product_mask {
