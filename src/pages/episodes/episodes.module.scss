@@ -223,6 +223,16 @@
     margin: 8rem 0;
   }
 
+  .logo_back {
+    width: 6rem;
+  }
+
+  .logo {
+    & img {
+      width: 7rem;
+    }
+  }
+
   .product_header {
     flex-wrap: wrap;
     position: fixed;
