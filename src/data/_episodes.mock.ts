@@ -3,8 +3,18 @@ import img1 from "../assets/episodes/img_1.png"
 import img2 from "../assets/episodes/img2.png"
 import img3 from "../assets/episodes/img3.jpg"
 import img4 from "../assets/episodes/img4.jpg"
+import img5 from "../assets/episodes/img5.jpg"
 
 export const IEpisode_MOCK: IEpisode[] = [
+  {
+    linkYouTube: "https://www.youtube.com/watch?v=aNr0Odc34WU&t=69s",
+    linkSpotify: "https://open.spotify.com/show/6TRR1IVOe4VpjaDZH2M9LD?si=XK3cNdXMQna3POOZEg_opw",
+    image: img5,
+    id: 5,
+    number: "How to launch a biotech startup",
+    title: "",
+    description: ""
+  },
   {
     linkYouTube: "https://www.youtube.com/watch?v=llDfAv96spA&t=6s",
     linkSpotify: "https://open.spotify.com/show/6TRR1IVOe4VpjaDZH2M9LD?si=XK3cNdXMQna3POOZEg_opw",
@@ -40,5 +50,5 @@ export const IEpisode_MOCK: IEpisode[] = [
     number: "Mental & Physical Health Connection",
     title: "Maggie Lentz",
     description: ""
-  },
+  }
 ];
