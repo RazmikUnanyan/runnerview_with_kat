@@ -4,8 +4,28 @@ import img2 from "../assets/episodes/img2.png"
 import img3 from "../assets/episodes/img3.jpg"
 import img4 from "../assets/episodes/img4.jpg"
 import img5 from "../assets/episodes/img5.jpg"
+import img6 from "../assets/episodes/img6.jpg"
+import img7 from "../assets/episodes/img7.jpg"
 
 export const IEpisode_MOCK: IEpisode[] = [
+  {
+    linkYouTube: "https://www.youtube.com/watch?v=Cly7eldP8d0&t=5s",
+    linkSpotify: "https://open.spotify.com/show/6TRR1IVOe4VpjaDZH2M9LD?si=XK3cNdXMQna3POOZEg_opw",
+    image: img7,
+    id: 7,
+    number: "Trump's 2025 tariffs explained",
+    title: "",
+    description: ""
+  },
+  {
+    linkYouTube: "https://www.youtube.com/watch?v=dgDdmS_sJIA&t=490s",
+    linkSpotify: "https://open.spotify.com/show/6TRR1IVOe4VpjaDZH2M9LD?si=XK3cNdXMQna3POOZEg_opw",
+    image: img6,
+    id: 6,
+    number: "A journey to running ultra races",
+    title: "",
+    description: ""
+  },
   {
     linkYouTube: "https://www.youtube.com/watch?v=aNr0Odc34WU&t=69s",
     linkSpotify: "https://open.spotify.com/show/6TRR1IVOe4VpjaDZH2M9LD?si=XK3cNdXMQna3POOZEg_opw",
